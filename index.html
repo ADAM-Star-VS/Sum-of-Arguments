@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Arguments</title>
+</head>
+<body>
+
+  <h1>Sum of Arguments</h1>
+
+  <div id="output"></div>
+
+  <script>
+    function sumAll(...args) {
+      let sum = 0;
+      for (let i = 0; i < args.length; i++) {
+        sum += args[i];
+      }
+      return sum;
+    }
+
+    const result1 = sumAll(1, 2, 3);
+    const result2 = sumAll(10, 20, 30, 40);
+    const result3 = sumAll(); // Sum of no arguments is 0
+
+    // Display output in the HTML
+    const outputDiv = document.getElementById("output");
+
+    outputDiv.innerHTML = `
+      <p>Sum of 1, 2, 3: ${result1}</p>
+      <p>Sum of 10, 20, 30, 40: ${result2}</p>
+      <p>Sum of no arguments: ${result3}</p>
+    `;
+
+  </script>
+
+</body>
+</html>
